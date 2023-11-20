@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>World Xplore</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Toggle the mobile-menu-active class on click
+                $(".icon").click(function() {
+                    $("nav").toggleClass("mobile-menu-active");
+                });
+            });
+        </script>
+	
+	<title>World Xplore</title>
 </head>
 <body>
+	
     <div class="video">
     <video autoplay loop muted class="fullscreen-video">
         <source src="video/video.mp4" type="video/mp4">
@@ -172,6 +183,8 @@
        
     </div>
     <nav class="main-menu">
+		<div class="icon">&#9776;</div>
+
         <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <div class="dropdown">
@@ -185,7 +198,17 @@
         <li><a href="https://rediscoversingapore.co/">Rediscover Singapore</a></li>
         <li><a href="https://www.royalcaribbean.com/sgp/en">Cruises</a></li>
         <li><a href="ContactUs.html">Contact Us</a></li>
+
 		
+	
+</ul>
+
+
+		</div>
+		
+		</div>
+		
+
         </ul>
 		
         </nav>
@@ -227,7 +250,12 @@
                 <p>&copy; 2023 Your Website Name. All rights reserved.</p>
             
         </footer>
-        
+		<script>
+			function toggleMenu() {
+				const menuList = document.querySelector('.menu-list');
+				menuList.classList.toggle('show');
+			}
+		</script>
 </body>
 
 </html>
